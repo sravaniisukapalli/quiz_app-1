@@ -7,8 +7,6 @@ import { resetResultAction } from '../redux/result_reducer';
 import { resetAllAction } from '../redux/question_reducer';
 import { attempts_Number,earnPoints_Number,flagResult } from '../helper/helper';
 import { usePublishResult } from '../hooks/setResult';
-
-
 export default function Result(){
     const dispatch=useDispatch()
     const {questions:{queue,answers},result:{result,userId}}=useSelector(state=>state)
@@ -37,7 +35,8 @@ export default function Result(){
     }
 return(
     <div className='container'>
-        <h1 className='head'>RESULT</h1>
+    <div>  <h1 className='head'>RESULT</h1></div>
+        <div className='display'>   
         <div className='flex-center'>
         <div className='flex'> 
         <span>Username:</span>
@@ -62,7 +61,7 @@ return(
         <div className='flex'> 
         <span>Final Result:</span>
         <span style={{color:`${flag ?"lime":"red"}`}} className='bold'>{flag ? " Passed":" Failed"}</span>
-        </div>
+        </div></div>
         </div>
         <div >
             <Link className='rrev' to={'/'} onClick={onRetake}>RETAKE</Link>

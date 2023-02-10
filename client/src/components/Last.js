@@ -11,9 +11,7 @@ import { Link } from 'react-router-dom'
     const result =useSelector(state=>state.result.result);
     const {queue,trace}=useSelector(state=>state.questions);
     const dispatch=useDispatch()
- 
     function onPrevious(){
-
       if(trace>0){
                 dispatch(MovePrevQuestion());
       }
@@ -38,20 +36,13 @@ import { Link } from 'react-router-dom'
            return<Navigate to={'/result'}replace="true"></Navigate>
           }
 return(
-    <div className='first'>
-      
- 
+    <div className='first'>     
         <div className='good'>
-        < Questions onChecked={onChecked}></Questions>
-    
+        < Questions onChecked={onChecked}></Questions>   
  {trace > 0 ?<button className='rev' onClick={onPrevious}>Prev</button>:<div></div>}
  <button className='nex' onClick={onNext}>Next</button>
- 
 </div>
-<div >
- <Link className='qbtn' to={'/'} >Quit</Link>
-        </div>
-
+<div ><Link className='qbtn' to={'/'} >Quit</Link> </div>
 </div>
 )
 }

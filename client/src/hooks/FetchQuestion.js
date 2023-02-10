@@ -9,8 +9,6 @@ export const useFetchQuestion=()=>{
     const dispatch =useDispatch();
     const[getData, setGetData]=useState({isLoading:false,apiData:[],serverError:null});
     const {questionId} = useParams();
-
-   
     useEffect(()=>{
     setGetData(prev=>({...prev,isLoading:true}));
     (async()=>{

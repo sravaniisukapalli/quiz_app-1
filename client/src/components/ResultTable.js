@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { getServerData } from '../helper/helper'
-
 export default function ResultTable() {
 
     const [data, setData] = useState([])
-
     useEffect(() => {
         getServerData(`http://localhost:8080/api/result`, (res) => {
             setData(res)
         })
-    })
-
+    });
   return (
     <div>
         <table>

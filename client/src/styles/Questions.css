@@ -31,12 +31,13 @@ ul li{
     display: block;
     position: relative;
     font-weight: 400;
-    font-size: 1.35em;
+    font-size: 1.3em;
     padding: 25px 2px 25px 80px;
-    margin:10px auto;
+    margin:10px;
     height: 30px;
     z-index: 9;
     cursor: pointer;
+    width: 90%;
   }
   ul li.check{
     display: block;
@@ -80,6 +81,10 @@ input[type=radio]:checked ~ .check::before{
   width:500px; 
   display:inline-block;
 } 
+
+.ques{
+  color:rgb(18, 65, 234);
+}
 
 
  

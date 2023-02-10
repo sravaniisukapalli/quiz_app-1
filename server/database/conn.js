@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
 export default async function connect(){
-    await mongoose.connect('mongodb+srv://bdp471:NS5s5E2mfZ01nasH@cluster0.39n8r.mongodb.net/?retryWrites=true&w=majority')
+    await mongoose.connect('mongodb+srv://sravani21:5K9Pq149Rnz8ZCRw@cluster0.xjzkx6o.mongodb.net/?retryWrites=true&w=majority')
     console.log("Database Connected")
 }
